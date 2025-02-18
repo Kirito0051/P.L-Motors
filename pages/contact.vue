@@ -1,17 +1,17 @@
 <template>
-    <div class="py-10 min-h-screen bg-gray-50 flex flex-col items-center">
-        <!-- Hero Section with Image or Map -->
+    <div class="py-10 min-h-screen bg-gray-50 flex flex-col items-center mx-20 ">
+        <!-- Hero Section with Image or Map
         <section
-            class="w-full h-56 md:h-80 relative bg-cover bg-center flex items-center justify-center bg-[url('/images/japan.jpg')] rounded-3xl overflow-hidden">
+            class="w-full h-56 md:h-80 relative bg-cover bg-center flex items-center justify-center bg-[url('https://media.istockphoto.com/id/1302364806/photo/the-blurred-motorcycle-showroom-interior-design-with-dark-tone-color-background-product-with.jpg?s=612x612&w=0&k=20&c=_Atd3IVYtiGnSg78nDIVGzzI8GsK_eMrl3Wl_qjiGww=')] rounded-3xl overflow-hidden">
             <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             </div>
-        </section>
+        </section> -->
 
         <!-- Contact Section -->
-        <section class="w-full max-w-6xl py-8 px-4 md:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+        <section class="w-full max-w-6xl py-8 px-4 md:px-12 ">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <!-- Contact Information -->
-                <div class="bg-white shadow-lg rounded-2xl p-8 border-2">
+                <div class="bg-white shadow-lg rounded-2xl p-8 border-2 ">
                     <h2 class="text-2xl md:text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
                     <p class="text-gray-600 mb-6 text-base leading-relaxed">
                         We’d love to hear from you! Whether you have a question, feedback, or need support, feel free to
@@ -22,13 +22,13 @@
                             <span class="text-blue-500 mr-4">
                                 <i class="fas fa-phone"></i>
                             </span>
-                            <p class="text-gray-700">0123456789</p>
+                            <p class="text-gray-700">0000000000</p>
                         </li>
                         <li class="flex items-center">
                             <span class="text-blue-500 mr-4">
                                 <i class="fas fa-envelope"></i>
                             </span>
-                            <p class="text-gray-700">contact@Travel_Tails.com</p>
+                            <p class="text-gray-700">contact@PL.com</p>
                         </li>
                         <li class="flex items-center">
                             <span class="text-blue-500 mr-4">
@@ -81,13 +81,12 @@
                 </div>
             </div>
         </section>
-
     </div>
 </template>
 
 <script>
 definePageMeta({
-    layout: 'custom',  // Apply the 'default' layout here
+    layout: 'custom',
 });
 export default {
     data() {

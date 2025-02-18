@@ -1,25 +1,39 @@
 <template>
     <div>
-        <footer class="bg-gray-900 text-white py-4">
-            <div class="container mx-auto text-center">
+        <footer class="bg-gray-900 text-white py-8">
+            <div class="container mx-14  flex justify-between items-center">
+                <!-- Left side: Privacy Policy and Contact Us -->
+                <div class="flex gap-4">
+                    <p class="text-white hover:text-blue-400 uppercase">© 2024 P.L Motors. All rights reserved</p>
+                    <a href="#" class="text-white hover:text-blue-400 underline">Privacy Policy</a>
+                    <a href="/contact" class="text-white hover:text-blue-400 underline">Contact Us</a>
+                </div>
 
-                <div class="flex justify-center gap-4 mb-2">
-                    <a href="#" class="text-white hover:text-blue-400">Facebook</a>
-                    <a href="#" class="text-white hover:text-blue-400">Instagram</a>
-                    <a href="#" class="text-white hover:text-blue-400">Twitter</a>
-                    <a href="#" class="text-white hover:text-blue-400">LinkedIn</a>
+                <!-- Right side: Social media icons -->
+                <div class="flex gap-6">
+                    <a href="#" class="text-white hover:text-blue-400">
+                        <!-- Facebook Icon (using Font Awesome) -->
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-400">
+                        <!-- Instagram Icon (using Font Awesome) -->
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-400">
+                        <!-- Twitter Icon (using Font Awesome) -->
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-blue-400">
+                        <!-- LinkedIn Icon (using Font Awesome) -->
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                 </div>
-                <div class="flex justify-center gap-4 mb-2">
-                    <a href="#" class="text-white hover:text-blue-400">Privacy Policy</a>
-                    <a href="#" class="text-white hover:text-blue-400">Terms of Service</a>
-                    <a href="#" class="text-white hover:text-blue-400">Contact Us</a>
-                </div>
-                <p class="text-sm mt-2">© 2024 P.L Motors - All rights reserved</p>
-                <p class="text-xs mt-1">Email: info@PLmotors.com | Phone: 000000000</p>
             </div>
+
         </footer>
     </div>
 </template>
+
 
 <style scoped>
 footer {

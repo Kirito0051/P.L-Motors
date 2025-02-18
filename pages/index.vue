@@ -1,11 +1,11 @@
 <template>
     <div class="bg-gray-100 text-gray-800">
         <!-- Hero Section (Carousel) -->
-        <section id="home" class="relative h-[85vh] overflow-hidden bg-[#d7c8c1] bg-cover bg-center ">
-            <div class=" absolute inset-0 bg-opacity-40 "></div>
-            <div class=" container mx-auto text-center text-white relative z-10 p-40">
-                <h1 class="text-5xl font-bold md:text-7xl">Find Your Perfect Ride</h1>
-                <p class="mt-4 text-xl md:text-2xl">Explore the latest bikes, reviews, and buying guides</p>
+        <section id="home" class="relative h-[85vh] overflow-hidden bg-[#d7c8c1] bg-cover bg-center">
+            <div class="absolute inset-0 bg-opacity-40"></div>
+            <div class="container mx-auto text-center text-white relative z-10 px-4 md:px-16 py-16">
+                <h1 class="text-4xl font-bold md:text-7xl">Find Your Perfect Ride</h1>
+                <p class="mt-4 text-lg md:text-2xl">Explore the latest bikes, reviews, and buying guides</p>
                 <div class="mt-6 flex justify-center gap-6 z-20">
                     <nuxt-link to="/bikes"
                         class="bg-blue-600 px-6 py-3 text-white rounded-lg hover:bg-blue-700 transition">
@@ -29,26 +29,25 @@
         </section>
 
         <!-- Box Section -->
-        <section class="py-16 bg-gray-200 h-[120vh] mb-16"> <!-- Added mb-16 for spacing -->
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
+        <section class="py-16 bg-gray-200 h-[120vh] mb-16">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 h-full px-4">
                 <!-- Big Container on the Left -->
                 <div
                     class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start justify-start h-full border border-[D3D3D3]">
-                    <h2 class="text-xl font-bold mt-4 mb-28  px-2">
-                        "Explore our latest bike models and experience unmatched performance.
-                        Our expert team is here to guide you with personalized advice.
-                        Exclusive offers and flexible financing options available.
+                    <h2 class="text-lg md:text-xl font-bold mt-4 mb-28  px-2">
+                        "Explore our latest bike models and experience unmatched performance. Our expert team is here to
+                        guide you with personalized advice. Exclusive offers and flexible financing options available.
                         Visit us for a test ride and find your perfect bike."
                     </h2>
                     <div class="overflow-hidden w-full h-full">
                         <img src="/public/images/bike_section.1.jpg" alt="Left Container Image"
-                            class="object-cover w-[26rem] h-auto" style="object-position: left;" />
+                            class="object-cover w-full h-[300px] md:w-[26rem] md:h-auto" />
                     </div>
                 </div>
 
                 <!-- Two Containers on the Right -->
                 <div class="flex flex-col space-y-8 h-full">
-                    <!-- Top Container with Image covering the whole container without overflowing -->
+                    <!-- Top Container with Image -->
                     <div class="bg-white shadow-md rounded-lg flex flex-col items-start h-1/2 border border-[#D3D3D3]">
                         <img src="/public/images/showroom.jpg" alt="Bike Image"
                             class="object-cover w-full h-full rounded-lg" />
@@ -56,7 +55,7 @@
 
                     <!-- Bottom Container with Text -->
                     <div
-                        class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start h-1/2 border border-[#D3D3D3 ]">
+                        class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start h-1/2 border border-[#D3D3D3]">
                         <h2 class="text-xl font-bold mb-8">Why Choose This Bike & PL Motors?</h2>
                         <p class="text-gray-600">✔ Precision-engineered for superior performance and agility</p>
                         <p class="text-gray-600">✔ Lightweight frame ensures maximum control and stability</p>
@@ -76,8 +75,8 @@
             </div>
         </section>
 
-        <!-- Featured Bike Section -->
-        <section id="Featured_Bike" class=" bg-gray-50">
+        <!-- Featured_Bike -->
+        <section id="Featured_Bike" class="bg-gray-50 py-16">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-bold text-gray-800 mb-2">Featured Bikes</h2>
@@ -86,149 +85,38 @@
                 </div>
 
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <!-- Bike Card 1 -->
-                    <div
+                    <!-- Loop through bikes data -->
+                    <div v-for="bike in bikes" :key="bike.id"
                         class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
                         <div class="relative overflow-hidden">
-                            <img src="https://i.pinimg.com/474x/1b/68/2d/1b682d76781cc2c32e4df57334b96d76.jpg"
-                                alt="Bike 1"
+                            <img :src="bike.image" alt="Bike image"
                                 class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" />
-                            <div
+                            <div v-if="bike.newTag"
                                 class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                                 New
                             </div>
                         </div>
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Bike Model 1</h3>
-                                <span class="text-blue-600 font-bold">₹1,50,000</span>
+                                <h3 class="text-xl font-bold text-gray-800">{{ bike.name }}</h3>
+                                <span class="text-blue-600 font-bold">{{ bike.price }}</span>
                             </div>
                             <div class="flex items-center gap-4 mb-4">
                                 <div class="flex items-center">
                                     <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">200 CC</span>
+                                    <span class="text-sm text-gray-600">{{ bike.cc }}</span>
                                 </div>
                                 <div class="flex items-center">
                                     <i class="fas fa-gas-pump text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">40 KMPL</span>
+                                    <span class="text-sm text-gray-600">{{ bike.kmpl }}</span>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm mb-4">Ride with style and power, the ultimate bike for
-                                adventure.</p>
+                            <p class="text-gray-600 text-sm mb-4">{{ bike.description }}</p>
                             <div class="flex justify-between items-center">
-                                <button class="text-gray-500 hover:text-red-500 transition-colors">
-                                    <i class="far fa-heart text-xl"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bike Card 2 -->
-                    <div
-                        class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                        <div class="relative overflow-hidden">
-                            <img src="https://i.pinimg.com/474x/1b/68/2d/1b682d76781cc2c32e4df57334b96d76.jpg"
-                                alt="Bike 2"
-                                class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" />
-                            <div
-                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                New
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Bike Model 2</h3>
-                                <span class="text-blue-600 font-bold">₹1,20,000</span>
-                            </div>
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">180 CC</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-gas-pump text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">50 KMPL</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Perfect for city riding, offering great fuel
-                                efficiency and comfort.</p>
-                            <div class="flex justify-between items-center">
-                                <button class="text-gray-500 hover:text-red-500 transition-colors">
-                                    <i class="far fa-heart text-xl"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bike Card 3 -->
-                    <div
-                        class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                        <div class="relative overflow-hidden">
-                            <img src="https://i.pinimg.com/474x/1b/68/2d/1b682d76781cc2c32e4df57334b96d76.jpg"
-                                alt="Bike 3"
-                                class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" />
-                            <div
-                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                New
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Bike Model 3</h3>
-                                <span class="text-blue-600 font-bold">₹1,80,000</span>
-                            </div>
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">250 CC</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-gas-pump text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">35 KMPL</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">For those who seek raw power and performance on the
-                                road.</p>
-                            <div class="flex justify-between items-center">
-                                <button class="text-gray-500 hover:text-red-500 transition-colors">
-                                    <i class="far fa-heart text-xl"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bike Card 4 -->
-                    <div
-                        class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                        <div class="relative overflow-hidden">
-                            <img src="https://i.pinimg.com/474x/1b/68/2d/1b682d76781cc2c32e4df57334b96d76.jpg"
-                                alt="Bike 4"
-                                class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" />
-                            <div
-                                class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                                New
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-4">
-                                <h3 class="text-xl font-bold text-gray-800">Bike Model 4</h3>
-                                <span class="text-blue-600 font-bold">₹2,00,000</span>
-                            </div>
-                            <div class="flex items-center gap-4 mb-4">
-                                <div class="flex items-center">
-                                    <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">300 CC</span>
-                                </div>
-                                <div class="flex items-center">
-                                    <i class="fas fa-gas-pump text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">30 KMPL</span>
-                                </div>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4">Experience unrivaled speed and agility with this
-                                premium model.</p>
-                            <div class="flex justify-between items-center">
-                                <button class="text-gray-500 hover:text-red-500 transition-colors">
-                                    <i class="far fa-heart text-xl"></i>
+                                <!-- Book Now Button -->
+                                <button @click="goToBookingPage(bike)"
+                                    class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                    Book Now
                                 </button>
                             </div>
                         </div>
@@ -243,7 +131,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- Reviews Section -->
         <section id="reviews" class="py-16 bg-white">
@@ -260,7 +147,6 @@
                             <div>
                                 <p class="font-semibold">John Doe</p>
                                 <div class="flex">
-                                    <!-- 4 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -282,7 +168,6 @@
                             <div>
                                 <p class="font-semibold">Jane Smith</p>
                                 <div class="flex">
-                                    <!-- 5 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -304,7 +189,6 @@
                             <div>
                                 <p class="font-semibold">Michael Brown</p>
                                 <div class="flex">
-                                    <!-- 3 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -314,21 +198,40 @@
                             </div>
                         </div>
                         <p class="text-gray-600">"Great bike overall. It's fast, sturdy, and looks amazing. Could use a
-                            little more comfort though." </p>
+                            little more comfort though."</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </div>
 </template>
+
 
 <script setup lang="ts">
 definePageMeta({
     layout: 'custom'
 })
+import { ref } from "vue";
+import { featuredBikes } from "@/data/featuredbikes"; // Import the data
+
+const bikes = ref(featuredBikes); // Store bikes data
+
+const goToBookingPage = (bike) => {
+    // When "Book Now" button is clicked, navigate to booking page with bike data
+    navigateTo({
+        path: "/BookingPage",
+        query: {
+            id: bike.id,
+            name: bike.name,
+            price: bike.price,
+            image: bike.image,
+            description: bike.description,
+            category: bike.category,
+        },
+    });
+};
 </script>
+
 
 <style>
 /* Hero Section Circle */
@@ -339,7 +242,7 @@ definePageMeta({
     transform: translateY(-50%);
     width: 550px;
     height: 500px;
-    background-color: #4564ce;
+    background-color: #4e71e1;
     border-radius: 50%;
     z-index: 10;
 }
@@ -351,7 +254,7 @@ definePageMeta({
     transform: translateX(-50%);
     width: 550px;
     height: 500px;
-    background-color: #d88068;
+    background-color: #e68c73;
     border-radius: 50%;
     z-index: 10;
 }

@@ -1,7 +1,9 @@
 <template>
-    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-center items-center">
-            <nav class="flex items-center space-x-8">
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50 w-full">
+        <div class="flex justify-between items-center mx-auto max-w-screen-xl px-8">
+            <!-- Navbar -->
+            <nav class="flex items-center space-x-8 justify-center flex-grow ml-20  ">
+                <!-- Added ml-4 to push navbar slightly to the right -->
                 <nuxt-link to="/" class="nav-link" @click.prevent="handleNavigation('home')">
                     Home
                 </nuxt-link>
@@ -18,6 +20,16 @@
                     Contact
                 </nuxt-link>
             </nav>
+
+            <button class="bg-white text-white w-10 h-10 rounded-full flex items-center justify-center relative group">
+                <img src="/images/login_icon.png" alt="Login Icon" class="w-8 h-8" />
+                <!-- Hidden text that appears on hover with a background -->
+                <span
+                    class="absolute top-full left-1/2 transform -translate-x-1/2 mb-2 bg-gray-700 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 py-2 px-4 rounded">
+                    Login
+                </span>
+            </button>
+
         </div>
     </header>
 </template>

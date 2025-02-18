@@ -10,9 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/supabase": "^1.4.6",
+    "@supabase/supabase-js": "^2.48.1",
+    "@tensorflow/tfjs": "^4.22.0",
     "nuxt": "^3.14.1592",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.16"
