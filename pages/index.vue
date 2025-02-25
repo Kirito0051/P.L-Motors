@@ -2,8 +2,8 @@
     <div class="bg-gray-100 text-gray-800">
         <!-- Hero Section (Carousel) -->
         <section id="home" class="relative h-[85vh] overflow-hidden bg-[#d7c8c1] bg-cover bg-center">
-            <div class="absolute inset-0 bg-opacity-40"></div>
-            <div class="container mx-auto text-center text-white relative z-10 px-4 md:px-16 py-16">
+            <div class="absolute inset-0 bg-opacity-40 sm:bg-opacity-0"></div>
+            <div class="container mx-auto text-center text-white relative z-10 p-20 md:p-40">
                 <h1 class="text-4xl font-bold md:text-7xl">Find Your Perfect Ride</h1>
                 <p class="mt-4 text-lg md:text-2xl">Explore the latest bikes, reviews, and buying guides</p>
                 <div class="mt-6 flex justify-center gap-6 z-20">
@@ -17,7 +17,7 @@
                     </nuxt-link>
                 </div>
             </div>
-            <div class="blur-[95px] hero-blur-circle"></div>
+            <div class="blur-[95px] hero-blur-circle "></div>
             <div class="blur-[100px] hero-blur-circle_2"></div>
 
             <!-- Carousel -->
@@ -29,43 +29,42 @@
         </section>
 
         <!-- Box Section -->
-        <section class="py-16 bg-gray-200 h-[120vh] mb-16">
-            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 h-full px-4">
+        <section class="py-16 bg-gray-200 mb-16">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Big Container on the Left -->
-                <div
-                    class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start justify-start h-full border border-[D3D3D3]">
-                    <h2 class="text-lg md:text-xl font-bold mt-4 mb-28  px-2">
-                        "Explore our latest bike models and experience unmatched performance. Our expert team is here to
-                        guide you with personalized advice. Exclusive offers and flexible financing options available.
+                <div class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start border border-gray-300">
+                    <h2 class="text-xl font-bold mt-4 mb-8 px-2">
+                        "Explore our latest bike models and experience unmatched performance.
+                        Our expert team is here to guide you with personalized advice.
+                        Exclusive offers and flexible financing options available.
                         Visit us for a test ride and find your perfect bike."
                     </h2>
-                    <div class="overflow-hidden w-full h-full">
+                    <div class="w-full flex justify-center">
                         <img src="/public/images/bike_section.1.jpg" alt="Left Container Image"
-                            class="object-cover w-full h-[300px] md:w-[26rem] md:h-auto" />
+                            class="object-cover w-full md:w-[26rem] h-auto" style="object-position: left;" />
                     </div>
                 </div>
 
-                <!-- Two Containers on the Right -->
-                <div class="flex flex-col space-y-8 h-full">
-                    <!-- Top Container with Image -->
-                    <div class="bg-white shadow-md rounded-lg flex flex-col items-start h-1/2 border border-[#D3D3D3]">
-                        <img src="/public/images/showroom.jpg" alt="Bike Image"
-                            class="object-cover w-full h-full rounded-lg" />
+                <!-- Right Side Containers -->
+                <div class="flex flex-col space-y-8">
+                    <!-- Top Container -->
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-300">
+                        <img src="/public/images/showroom.jpg" alt="Bike Image" class="object-cover w-full h-full" />
                     </div>
 
-                    <!-- Bottom Container with Text -->
-                    <div
-                        class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start h-1/2 border border-[#D3D3D3]">
-                        <h2 class="text-xl font-bold mb-8">Why Choose This Bike & PL Motors?</h2>
-                        <p class="text-gray-600">✔ Precision-engineered for superior performance and agility</p>
-                        <p class="text-gray-600">✔ Lightweight frame ensures maximum control and stability</p>
-                        <p class="text-gray-600">✔ Advanced braking and suspension for a smooth, safe ride</p>
-                        <p class="text-gray-600">✔ Available in multiple colors with exclusive showroom deals</p>
-                        <p class="text-gray-600">✔ Visit PL Motors for expert guidance and flexible financing options.
-                        </p>
-                        <div class="w-full flex justify-end mt-12 px-4 font-bold">
+                    <!-- Bottom Container -->
+                    <div class="bg-white p-6 shadow-md rounded-lg border border-gray-300">
+                        <h2 class="text-xl font-bold mb-4">Why Choose This Bike & PL Motors?</h2>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>✔ Precision-engineered for superior performance and agility</li>
+                            <li>✔ Lightweight frame ensures maximum control and stability</li>
+                            <li>✔ Advanced braking and suspension for a smooth, safe ride</li>
+                            <li>✔ Available in multiple colors with exclusive showroom deals</li>
+                            <li>✔ Visit PL Motors for expert guidance and flexible financing options</li>
+                        </ul>
+                        <div class="w-full flex justify-end mt-6">
                             <nuxt-link to="/contact#office-location"
-                                class="text-gray-600 hover:text-black flex items-center">
+                                class="text-gray-600 hover:text-black flex items-center font-bold">
                                 Find Us Here
                                 <img src="/images/arrow.png" alt="arrow" class="w-5 h-5 ml-2" />
                             </nuxt-link>
@@ -84,13 +83,12 @@
                     <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
                 </div>
 
-                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    <!-- Loop through bikes data -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <div v-for="bike in bikes" :key="bike.id"
                         class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
                         <div class="relative overflow-hidden">
                             <img :src="bike.image" alt="Bike image"
-                                class="w-full h-64 object-cover transform transition duration-500 group-hover:scale-110" />
+                                class="w-full h-64 object-contain transform transition duration-500 group-hover:scale-110" />
                             <div v-if="bike.newTag"
                                 class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                                 New
@@ -101,29 +99,24 @@
                                 <h3 class="text-xl font-bold text-gray-800">{{ bike.name }}</h3>
                                 <span class="text-blue-600 font-bold">{{ bike.price }}</span>
                             </div>
-                            <div class="flex items-center gap-4 mb-4">
+                            <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
                                 <div class="flex items-center">
-                                    <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">{{ bike.cc }}</span>
+                                    <i class="fas fa-tachometer-alt text-gray-500 mr-2"></i>{{ bike.cc }}
                                 </div>
                                 <div class="flex items-center">
-                                    <i class="fas fa-gas-pump text-gray-500 mr-2"></i>
-                                    <span class="text-sm text-gray-600">{{ bike.kmpl }}</span>
+                                    <i class="fas fa-gas-pump text-gray-500 mr-2"></i>{{ bike.kmpl }}
                                 </div>
                             </div>
                             <p class="text-gray-600 text-sm mb-4">{{ bike.description }}</p>
-                            <div class="flex justify-between items-center">
-                                <!-- Book Now Button -->
-                                <button @click="goToBookingPage(bike)"
-                                    class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                                    Book Now
-                                </button>
-                            </div>
+                            <button @click="goToBookingPage(bike)"
+                                class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+                                Book Now
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="text-center mt-12">
+                <div class="text-center mt-10">
                     <nuxt-link to="/bikes"
                         class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                         View All Bikes
@@ -132,8 +125,9 @@
             </div>
         </section>
 
+
         <!-- Reviews Section -->
-        <section id="reviews" class="py-16 bg-white">
+        <section id="reviews" class="py-10 bg-white">
             <div class="container mx-auto text-center">
                 <h2 class="text-4xl font-bold">Customer Reviews</h2>
                 <p class="mt-4 text-gray-600">See what our customers are saying about our bikes</p>
@@ -147,6 +141,7 @@
                             <div>
                                 <p class="font-semibold">John Doe</p>
                                 <div class="flex">
+                                    <!-- 4 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -168,6 +163,7 @@
                             <div>
                                 <p class="font-semibold">Jane Smith</p>
                                 <div class="flex">
+                                    <!-- 5 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -189,6 +185,7 @@
                             <div>
                                 <p class="font-semibold">Michael Brown</p>
                                 <div class="flex">
+                                    <!-- 3 stars filled out of 5 -->
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
                                     <span class="text-yellow-500">&#9733;</span>
@@ -198,14 +195,13 @@
                             </div>
                         </div>
                         <p class="text-gray-600">"Great bike overall. It's fast, sturdy, and looks amazing. Could use a
-                            little more comfort though."</p>
+                            little more comfort though." </p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </template>
-
 
 <script setup lang="ts">
 definePageMeta({
@@ -235,13 +231,16 @@ const goToBookingPage = (bike) => {
 
 <style>
 /* Hero Section Circle */
+/* Hero Section Circle */
 .hero-blur-circle {
     position: absolute;
     top: 90%;
-    right: -250px;
+    right: -20vw;
     transform: translateY(-50%);
-    width: 550px;
-    height: 500px;
+    width: 40vw;
+    height: 35vw;
+    max-width: 550px;
+    max-height: 500px;
     background-color: #4e71e1;
     border-radius: 50%;
     z-index: 10;
@@ -250,12 +249,58 @@ const goToBookingPage = (bike) => {
 .hero-blur-circle_2 {
     position: absolute;
     top: 65%;
-    right: -50px;
+    right: -10vw;
     transform: translateX(-50%);
-    width: 550px;
-    height: 500px;
+    width: 40vw;
+    height: 35vw;
+    max-width: 550px;
+    max-height: 500px;
     background-color: #e68c73;
     border-radius: 50%;
     z-index: 10;
 }
+
+/* Responsive adjustments
+@media (max-width: 1024px) {
+
+    .hero-blur-circle,
+    .hero-blur-circle_2 {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-blur-circle {
+        top: 85%;
+        right: -15vw;
+        width: 50vw;
+        height: 45vw;
+    }
+
+    .hero-blur-circle_2 {
+        top: 60%;
+        right: -5vw;
+        width: 50vw;
+        height: 45vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-blur-circle,
+    .hero-blur-circle_2 {
+        width: 60vw;
+        height: 55vw;
+        right: -5vw;
+    }
+
+    .hero-blur-circle {
+        top: 80%;
+    }
+
+    .hero-blur-circle_2 {
+        top: 50%;
+    }
+} */
 </style>
