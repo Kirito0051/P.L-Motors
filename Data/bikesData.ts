@@ -2,7 +2,7 @@ export const bikesData = [
   {
     id: 1,
     name: "Suzuki Access 125",
-    category: "Scooters",
+    category: "Sport Bikes",
     price: "120,999",
     description:
       "A high-performance sport bike built for speed and agility. Perfect for enthusiasts looking for an exciting ride.",
