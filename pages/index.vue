@@ -23,7 +23,8 @@
             <!-- Carousel -->
             <div class="absolute inset-0 overflow-hidden flex justify-center items-center">
                 <div class="carousel-slide flex justify-center items-center h-full">
-                    <img src="/public/images/bike.png" alt="Bike Image 1" class="object-cover w-[50rem] h-[50rem]" />
+                    <img src="/public/images/bike.png" alt="Bike Image 1" class="object-cover w-[50rem] h-[50rem]"
+                        loading="lazy" />
                 </div>
             </div>
         </section>
@@ -41,7 +42,8 @@
                     </h2>
                     <div class="w-full flex justify-center">
                         <img src="/public/images/bike_section.1.jpg" alt="Left Container Image"
-                            class="object-cover w-full md:w-[26rem] h-auto" style="object-position: left;" />
+                            class="object-cover w-full md:w-[26rem] h-auto" style="object-position: left;"
+                            loading="lazy" />
                     </div>
                 </div>
 
@@ -49,7 +51,8 @@
                 <div class="flex flex-col space-y-8">
                     <!-- Top Container -->
                     <div class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-300">
-                        <img src="/public/images/showroom.jpg" alt="Bike Image" class="object-cover w-full h-full" />
+                        <img src="/public/images/showroom.jpg" alt="Bike Image" class="object-cover w-full h-full"
+                            loading="lazy" />
                     </div>
 
                     <!-- Bottom Container -->
@@ -66,7 +69,7 @@
                             <nuxt-link to="/contact#office-location"
                                 class="text-gray-600 hover:text-black flex items-center font-bold">
                                 Find Us Here
-                                <img src="/images/arrow.png" alt="arrow" class="w-5 h-5 ml-2" />
+                                <img src="/images/arrow.png" alt="arrow" class="w-5 h-5 ml-2" loading="lazy" />
                             </nuxt-link>
                         </div>
                     </div>
@@ -75,7 +78,7 @@
         </section>
 
         <!-- Featured_Bike -->
-        <section id="Featured_Bike" class="bg-gray-50 py-16">
+        <section id="Featured_Bike" class="bg-gray-50 py-10 ">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-bold text-gray-800 mb-2">Featured Bikes</h2>
@@ -88,7 +91,8 @@
                         class="group bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
                         <div class="relative overflow-hidden">
                             <img :src="bike.image" alt="Bike image"
-                                class="w-full h-64 object-contain transform transition duration-500 group-hover:scale-110" />
+                                class="w-full h-64 object-contain transform transition duration-500 group-hover:scale-110"
+                                loading="lazy" />
                             <div v-if="bike.newTag"
                                 class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                                 New

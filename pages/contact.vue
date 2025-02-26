@@ -33,7 +33,8 @@
                             <span class="text-blue-500 mr-3">
                                 <i class="fas fa-map-marker-alt"></i>
                             </span>
-                            <p class="text-gray-700">Rrjc Entrance, L Napoo Road, Matunga, Mumbai, Maharashtra 400019
+                            <p class="text-gray-700">Ankur Cinema Hall, Agra Rd, Ghat Gate, Amratpuri, Pink City,
+                                Jaipur, Rajasthan 302007
                             </p>
                         </li>
                     </ul>
@@ -71,10 +72,10 @@
         <!-- Office Location Section -->
         <section id="office-location" class="w-full max-w-6xl py-8 px-4">
             <div class="bg-white shadow-lg rounded-2xl p-4 md:p-10 border">
-                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-gray-800">Our Office Location</h2>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-gray-800">Our Location</h2>
                 <div class="relative w-full h-64 md:h-72">
                     <iframe class="w-full h-full rounded-lg shadow-sm"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482038.3064756847!2d72.56748881524913!3d19.285659248335083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf2892cdfbe1%3A0x3464d48f78846cf9!2sRamnarain%20Ruia%20Autonomous%20College!5e0!3m2!1sen!2sin!4v1738647350471!5m2!1sen!2sin"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.72112768694!2d75.83607997543949!3d26.91321977664689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db7bec93029d5%3A0x2cb2a01eb8dec21f!2sJumma%20bajar!5e1!3m2!1sen!2sin!4v1740562943918!5m2!1sen!2sin"
                         style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -82,6 +83,7 @@
         </section>
     </div>
 </template>
+
 
 <script>
 definePageMeta({

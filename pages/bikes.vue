@@ -96,7 +96,7 @@ import { useRouter } from 'vue-router'
 import { bikesData } from '~/Data/bikesData'
 
 const router = useRouter()
-const categories = ref(['Sport Bikes', 'Cruisers', 'Adventure', 'Electric'])
+const categories = ref(['Scooters', 'Cruisers', 'Adventure', 'Electric'])
 const bikes = ref(bikesData)
 const selectedCategory = ref('all')
 const showMobileCategories = ref(false);
