@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -8,14 +8,16 @@ module.exports = {
     "./app.vue",
     "./error.vue",
   ],
+
   theme: {
     extend: {
       fontFamily: {
-        edu: ['"Edu AU VIC WA NT Pre"', "sans-serif"], // Add your font here
+        edu: ['"Edu AU VIC WA NT Pre"', "sans-serif"],
         cur: ['"Sour Gummy"', "cursive"],
         play: ["Playwrite NG Modern", "serif"],
       },
     },
   },
+
   plugins: [],
 };
