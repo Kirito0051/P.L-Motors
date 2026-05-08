@@ -39,6 +39,8 @@ This project was created for a bike showroom client to provide a modern and visu
 
 ![Homepage Mobile](./public/images/homepage-mobile.jpeg)
 
+![Bikes Section Mobile](./public/images/bike-mobile.jpeg)
+
 ![Navigation Mobile](./public/images/bikes-nav.png)
 
 ## Installation
