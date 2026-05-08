@@ -29,7 +29,17 @@ This project was created for a bike showroom client to provide a modern and visu
 
 ## Screenshots
 
-(Add screenshots later)
+### Desktop View
+
+![Homepage Desktop](./img/homepage-desktop.png)
+
+![Bikes Section Desktop](./img/bikes-desktop.png)
+
+### Mobile View
+
+![Homepage Mobile](./img/homepage-mobile.jpeg)
+
+![Navigation Mobile](./img/bikes-nav.png)
 
 ## Installation
 
