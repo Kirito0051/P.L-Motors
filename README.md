@@ -1,75 +1,38 @@
-# Nuxt Minimal Starter
+# P.L Motors
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern bike showroom website built using Nuxt.js and Tailwind CSS.
 
-## Setup
+## Live Demo
 
-Make sure to install dependencies:
+[Live Demo](https://plmotors.vercel.app)
+
+## Features
+
+- Responsive modern UI
+- Bike showcase section
+- Smooth navigation
+- Mobile-friendly design
+- Custom styling with Tailwind CSS
+- Interactive frontend experience
+
+## Tech Stack
+
+- Nuxt.js
+- Tailwind CSS
+- JavaScript
+- HTML
+- CSS
+
+## Project Purpose
+
+This project was created for a bike showroom client to provide a modern and visually engaging online presence.
+
+## Screenshots
+
+(Add screenshots later)
+
+## Installation
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
