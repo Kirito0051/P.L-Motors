@@ -31,15 +31,15 @@ This project was created for a bike showroom client to provide a modern and visu
 
 ### Desktop View
 
-![Homepage Desktop](./img/homepage-desktop.png)
+![Homepage Desktop](./public/images/homepage-desktop.png)
 
-![Bikes Section Desktop](./img/bikes-desktop.png)
+![Bikes Section Desktop](./public/images/bikes-desktop.png)
 
 ### Mobile View
 
-![Homepage Mobile](./img/homepage-mobile.jpeg)
+![Homepage Mobile](./public/images/homepage-mobile.jpeg)
 
-![Navigation Mobile](./img/bikes-nav.png)
+![Navigation Mobile](./public/images/bikes-nav.png)
 
 ## Installation
 
