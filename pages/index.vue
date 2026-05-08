@@ -212,7 +212,7 @@ definePageMeta({
     layout: 'custom'
 })
 import { ref } from "vue";
-import { featuredBikes } from "@/data/featuredBikes.ts"; // Import the data
+import { featuredBikes } from "@/Data/featuredBikes"; // Import the data
 
 const bikes = ref(featuredBikes); // Store bikes data
 
