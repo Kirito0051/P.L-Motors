@@ -1,5 +1,7 @@
 <template>
-    <header class="bg-white shadow-md py-4 sticky top-0 z-40 w-full">
+
+
+<header class="bg-white shadow-md py-4 sticky top-0 z-40 w-full">
         <div class="flex items-center justify-between max-w-screen-xl px-8 mx-auto relative">
             <!-- Mobile: Logo on the left -->
             <nuxt-link to="/" class="text-3xl font-bold text-gray-800 cursor-pointer md:hidden">

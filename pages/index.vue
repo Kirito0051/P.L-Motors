@@ -76,7 +76,7 @@
                 </div>
             </div>
         </section>
-
+     
         <!-- Featured_Bike -->
         <section id="Featured_Bike" class="bg-gray-50 py-10 ">
             <div class="container mx-auto px-4">
@@ -101,7 +101,7 @@
                         <div class="p-6">
                             <div class="flex justify-between items-center mb-4">
                                 <h3 class="text-xl font-bold text-gray-800">{{ bike.name }}</h3>
-                                <span class="text-blue-600 font-bold">{{ bike.price }}</span>
+                                <span class="text-blue-600 font-bold">{{ formatPrice(bike.price) }}</span>
                             </div>
                             <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
                                 <div class="flex items-center">
@@ -213,7 +213,9 @@ definePageMeta({
 })
 import { ref } from "vue";
 import { featuredBikes } from "@/Data/featuredBikes"; // Import the data
+import { useCurrency } from "~/composables/useCurrency";
 
+const { formatPrice, country } = useCurrency();
 const bikes = ref(featuredBikes); // Store bikes data
 
 const goToBookingPage = (bike) => {

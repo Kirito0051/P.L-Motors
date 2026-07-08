@@ -2,7 +2,7 @@ export const featuredBikes = [
   {
     id: 1,
     name: "Pulsar N160",
-    price: "₹1,50,000",
+    price:150000,
     cc: "200 CC",
     kmpl: "40 KMPL",
     description: "Ride with style and power, the ultimate bike for adventure.",
@@ -13,7 +13,7 @@ export const featuredBikes = [
   {
     id: 2,
     name: "Harley-Davidson",
-    price: "₹1,20,000",
+    price: 120000,
     cc: "180 CC",
     kmpl: "50 KMPL",
     description:
@@ -26,7 +26,7 @@ export const featuredBikes = [
   {
     id: 3,
     name: "Harley-Davidson",
-    price: "₹1,80,000",
+    price: 180000,
     cc: "250 CC",
     kmpl: "35 KMPL",
     description: "For those who seek raw power and performance on the road.",
@@ -38,7 +38,7 @@ export const featuredBikes = [
   {
     id: 4,
     name: "Jawa 42 Bobber",
-    price: "₹2,00,000",
+    price: 200000,
     cc: "300 CC",
     kmpl: "30 KMPL",
     description:

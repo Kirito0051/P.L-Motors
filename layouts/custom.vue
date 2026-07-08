@@ -16,4 +16,13 @@
 <script setup>
 import Navbar from '~/components/Navbar.vue';
 import Footer from '~/components/Footer.vue';
+
+import { onMounted } from "vue";
+import { useCurrency } from "~/composables/useCurrency";
+
+const { detectCountry } = useCurrency();
+
+onMounted(() => {
+  detectCountry();
+});
 </script>

@@ -58,7 +58,7 @@
                         </button>
                     </div>
                     <h3 class="text-lg font-semibold">{{ bike.name }}</h3>
-                    <span class="text-sm font-semibold text-gray-700">{{ bike.price }}</span>
+                    <span class="text-sm font-semibold text-gray-700">{{ formatPrice(bike.price) }}</span>
                     <!-- Plus Button for Booking -->
                     <!-- <button
                         class="absolute bottom-3 right-3 w-12 h-12 bg-[#ffd387] text-black rounded-full flex items-center justify-center hover:bg-[#d6a343] active:bg-[#ffd077] transition-colors duration-300"
@@ -94,7 +94,9 @@ definePageMeta({
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { bikesData } from '~/Data/bikesData'
+import { useCurrency } from "~/composables/useCurrency";
 
+const { formatPrice, country } = useCurrency();
 const router = useRouter()
 const categories = ref(['Scooters', 'Cruisers', 'Adventure', 'Electric'])
 const bikes = ref(bikesData)

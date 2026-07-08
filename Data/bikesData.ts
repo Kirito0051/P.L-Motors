@@ -3,7 +3,7 @@ export const bikesData = [
     id: 1,
     name: "Suzuki Access 125",
     category: "Scooters",
-    price: "120,999",
+    price: 120999,
     description:
       "A high-performance sport bike built for speed and agility. Perfect for enthusiasts looking for an exciting ride.",
     image:
@@ -14,7 +14,7 @@ export const bikesData = [
     id: 2,
     name: "Royal Enfield Classic 350",
     category: "Cruisers",
-    price: "150,499",
+    price: 15099,
     description:
       "A comfortable cruiser designed for long rides. Enjoy relaxed touring with enhanced comfort and style.",
     image:
@@ -25,7 +25,7 @@ export const bikesData = [
     id: 3,
     name: "Suzuki Intruder 150",
     category: "Adventure",
-    price: "160,999",
+    price: 160999,
     description:
       "Built for versatility, this adventure bike conquers any terrain. Ideal for long journeys and off-road escapades.",
     image:
@@ -36,7 +36,7 @@ export const bikesData = [
     id: 4,
     name: "Classic 350 Dark",
     category: "Electric",
-    price: "130,999",
+    price: 130999,
     description:
       "A sleek and modern electric bike offering impressive range. Perfect for daily commuting with zero emissions.",
     image: "https://imgd.aeplcdn.com/1056x594/n/wynqleb_1768247.jpg?q=80",
