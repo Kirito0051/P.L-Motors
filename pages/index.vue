@@ -30,7 +30,7 @@
         </section>
 
         <!-- Box Section -->
-        <section class="py-16 bg-gray-200 mb-16">
+        <section id="Box-Section" class="py-16 bg-gray-200 mb-16">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Big Container on the Left -->
                 <div class="bg-white p-6 shadow-md rounded-lg flex flex-col items-start border border-gray-300">
@@ -40,7 +40,7 @@
                         Exclusive offers and flexible financing options available.
                         Visit us for a test ride and find your perfect bike."
                     </h2>
-                    <div class="w-full flex justify-center">
+                    <div id="Box-Section-image" class="w-full flex justify-center">
                         <img src="/public/images/bike_section.1.jpg" alt="Left Container Image"
                             class="object-cover w-full md:w-[26rem] h-auto" style="object-position: left;"
                             loading="lazy" />

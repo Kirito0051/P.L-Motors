@@ -1,0 +1,313 @@
+/* 1920px and above */
+@media (min-width: 1920px) {
+
+  /* =========================
+     HOME PAGE
+     ========================= */
+
+
+   #home .relative.z-10 {
+    transform: translateY(180px);
+  }
+
+  #home h1 {
+    font-size: 6.5rem;
+  }
+
+  #home p {
+    font-size: 2.5rem;
+  }
+
+
+  #home img {
+    width: 75rem;
+    height: auto;
+  }
+
+ #home .mt-6 {
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;  
+    button {
+      padding: 2rem 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  /* Homepage containers */
+  #home .container,
+  .container {
+    max-width: 1800px;
+  
+}
+
+  #Box-Section h2 {
+    font-size: 2rem;
+  }
+
+  #Box-Section ul {
+    font-size: 1.2rem;
+  }
+
+  #Box-Section-image img {
+    margin-top: 4rem;
+    width: 40rem;
+    height: auto;
+  }
+
+
+  #Featured_Bike h2 {
+    font-size: 5rem;
+  }
+
+  #Featured_Bike p {
+    font-size: 1.25em;
+  }
+
+
+  /* More spacing */
+  section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  /* =========================
+     BIKES PAGE
+     ========================= */
+
+  .grid.lg\:grid-cols-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Bigger bike cards */
+  .group {
+    padding: 2rem;
+  }
+
+  /* =========================
+     CONTACT PAGE
+     ========================= */
+
+  .max-w-6xl {
+    max-width: 1800px;
+  }
+
+}
+
+@media (min-width: 1920px) {
+
+  /* ===========================
+     Featured Bikes
+     =========================== */
+
+  #Featured_Bike {
+    padding: 8rem 0;
+  }
+
+  /* Much wider container */
+  #Featured_Bike .container {
+    max-width: 1900px !important;
+  }
+
+  /* Bigger title */
+  #Featured_Bike h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Bigger subtitle */
+  #Featured_Bike > .container > div:first-child p {
+    font-size: 1.5rem;
+  }
+
+  /* Bigger underline */
+  #Featured_Bike .w-24 {
+    width: 10rem;
+    height: 6px;
+  }
+
+  /* More space between cards */
+  #Featured_Bike .grid {
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+
+  /* Bigger cards */
+  #Featured_Bike .group {
+    transform: scale(1.15);
+    transform-origin: center;
+  }
+
+  /* Bigger bike image */
+  #Featured_Bike img {
+    height: 420px;
+  }
+
+  /* Bigger padding inside cards */
+  #Featured_Bike .p-6 {
+    padding: 2.5rem;
+  }
+
+  /* Bike name */
+  #Featured_Bike h3 {
+    font-size: 2rem;
+  }
+
+  /* Price */
+  #Featured_Bike span {
+    font-size: 1.6rem;
+  }
+
+  /* Specs */
+  #Featured_Bike .text-sm {
+    font-size: 1.1rem;
+  }
+
+  /* Book button */
+  #Featured_Bike button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* View all button */
+  #Featured_Bike .mt-10 {
+    margin-top: 6rem;
+  }
+
+   #Featured_Bike .mt-10 a {
+    padding: 1.2rem 3rem;
+    font-size: 1.8rem;
+    border-radius: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  /* ===========================
+     Customer Reviews
+     =========================== */
+  #reviews {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+  }
+
+  #reviews .container {
+    max-width: 1900px !important;
+  }
+
+  /* Heading */
+  #reviews h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Subtitle */
+  #reviews > .container > p {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Grid */
+  #reviews .grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  #reviews .review-card {
+    width: 420px;
+  }
+
+  /* Profile image */
+  #reviews img {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  /* Customer name */
+  #reviews .font-semibold {
+    font-size: 1.5rem;
+  }
+
+  /* Stars */
+  #reviews .flex span {
+    font-size: 1.3rem;
+  }
+
+  /* Review text */
+  #reviews .review-card p:last-child {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 1.5rem;
+  }
+
+}
+
+@media (min-width: 1920px) {
+
+  footer {
+    padding: 5rem 0;
+  }
+
+  footer p,
+  footer a {
+    font-size: 1.8rem;
+  }
+
+}
+
+@media (min-width: 1920px) {
+
+  /* Bigger navbar */
+  header {
+    padding: 1.5rem 0;
+  }
+
+  /* Wider container */
+  header > div{
+        max-width:2000px;
+        padding:0 5rem;
+    }
+
+    header nav{
+        left:0;
+        right:0;
+
+        transform:none;
+
+        position:relative;
+
+        justify-content:center;
+
+        gap:7rem;
+    }
+
+  /* Bigger nav links */
+  header .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* Bigger logo */
+ 
+  header nav .text-3xl {
+    white-space: nowrap;
+    font-size: 2.8rem;
+  }
+
+
+  /* Bigger login icon */
+  header button img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  header button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+
+}
+
+

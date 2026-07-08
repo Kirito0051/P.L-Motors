@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   // Add global CSS files
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css", "~/assets/css/large-screen.css"],
 
   // PostCSS configuration for Tailwind and Autoprefixer
   postcss: {
